@@ -2,19 +2,18 @@
 
 ### Introduction
 
-Template Name: 	Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5
-Version: 		7.17
-Author: 		KeenThemes
-Website: 		(http://www.keenthemes.com/)
-Contact: 		support@keenthemes.com
-Follow: 		(http://twitter.com/keenthemes)
-Like: 			(http://facebook.com/keenthemes)
-Purchase: 		(http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes)
+Template Name: 	Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.5 \
+Version: 		7.17 \
+Author: 		KeenThemes \
+Website: 		(http://www.keenthemes.com/) \
+Purchase: 		(http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes) \
 License: 		You must have a valid license purchased only from Themeforest (the above link) in order to legally use the theme for your project.
 
-A single license can be used only for one domain or client. Each use of the theme requires a separate license. 
-Purchase A New License: (https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes)
-License Info: (http://themeforest.net/licenses/standard)
+
+
+A single license can be used only for one domain or client. Each use of the theme requires a separate license. \
+Purchase A New License: (https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes) \
+License Info: (http://themeforest.net/licenses/standard) \
 
 ### Installation
 
