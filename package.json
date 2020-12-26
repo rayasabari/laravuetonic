@@ -108,14 +108,19 @@
         "wnumb": "^1.2.0"
     },
     "devDependencies": {
+        "@tailwindcss/forms": "^0.2.1",
+        "alpinejs": "^2.7.3",
+        "autoprefixer": "^9.8.6",
         "axios": "^0.19",
         "cross-env": "^7.0.3",
         "laravel-mix": "^5.0.9",
         "lodash": "^4.17.20",
+        "postcss-import": "^12.0.1",
         "replace-in-file-webpack-plugin": "^1.0.6",
         "resolve-url-loader": "^3.1.2",
         "sass": "^1.30.0",
         "sass-loader": "^8.0.2",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
         "vue-template-compiler": "^2.6.12"
     }
 }
