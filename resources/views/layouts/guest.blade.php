@@ -30,6 +30,7 @@
 
   {{-- Includable CSS --}}
   @yield('styles')
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
   <!--begin::Page Custom Styles(used by this page)-->
   <link href="{{ asset('css/pages/login/classic/login-3.css') }}" rel="stylesheet" type="text/css" />
@@ -41,13 +42,15 @@
 
 <body id="kt_body"
   class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+  
   <!--begin::Main-->
   <div class="d-flex flex-column flex-root">
+    
     <!--begin::Login-->
-    <div class="login login-3 login-signin-on d-flex flex-row-fluid" id="kt_login">
+    <div class="login login-3 {{ $pageclass }} d-flex flex-row-fluid" id="kt_login">
       <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid"
         style="background-image: url({{ asset('media/bg/bg-1.jpg') }});">
-        <div class="login-form text-center text-white p-7 position-relative overflow-hidden">
+        <div class="overflow-hidden text-center text-white login-form p-7 position-relative">
           <!--begin::Login Header-->
           <div class="d-flex flex-center mb-15">
             <a href="#">
@@ -55,13 +58,15 @@
             </a>
           </div>
           <!--end::Login Header-->
-          {{ $slot }}
+          @yield('content')
         </div>
       </div>
     </div>
     <!--end::Login-->
+
   </div>
   <!--end::Main-->
+
   <script>
     var HOST_URL = "{{ route('dashboard') }}";
   </script>
@@ -71,12 +76,12 @@
   </script>
   <!--end::Global Config-->
   <!--begin::Global Theme Bundle(used by all pages)-->
-  <script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
-  <script src="{{ asset('plugins/custom/prismjs/prismjs.bundle.js') }}"></script>
-  <script src="{{ asset('js/scripts.bundle.js') }}"></script>
+  {{-- <script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script> --}}
+  {{-- <script src="{{ asset('plugins/custom/prismjs/prismjs.bundle.js') }}"></script> --}}
+  {{-- <script src="{{ asset('js/scripts.bundle.js') }}"></script> --}}
   <!--end::Global Theme Bundle-->
   <!--begin::Page Scripts(used by this page)-->
-  <script src="{{ asset('js/pages/custom/login/login-general.js') }}"></script>
+  {{-- <script src="{{ asset('js/pages/custom/login/login-general.js') }}"></script> --}}
   <!--end::Page Scripts-->
 </body>
 <!--end::Body-->

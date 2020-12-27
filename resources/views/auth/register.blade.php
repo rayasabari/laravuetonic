@@ -1,59 +1,56 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.guest', ['pageclass' => 'login-signup-on'])
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@section('content')
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
-
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-            </div>
-
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+<!--begin::Login Sign up form-->
+<div class="login-signup">
+  <div class="mb-20">
+    <h3>Sign Up</h3>
+    <p class="opacity-60">Enter your details to create your account</p>
+  </div>
+  <form class="text-center form" id="kt_login_signup_form" method="POST" action="/register">
+    @csrf
+    <div class="form-group">
+      <input
+        class="h-auto px-8 py-4 text-white placeholder-white border-0 form-control opacity-70 bg-dark-o-70 rounded-pill"
+        type="text" id="name" placeholder="Fullname" name="name" :value="old('name')" required autofocus/>
+    </div>
+    <div class="form-group">
+      <input
+        class="h-auto px-8 py-4 text-white placeholder-white border-0 form-control opacity-70 bg-dark-o-70 rounded-pill"
+        type="email" id="email" placeholder="Email" name="email" :value="old('email')" autocomplete="off" required/>
+    </div>
+    <div class="form-group">
+      <input
+        class="h-auto px-8 py-4 text-white placeholder-white border-0 form-control opacity-70 bg-dark-o-70 rounded-pill"
+        type="password" id="password" placeholder="Password" name="password" required autocomplete="new-password"/>
+    </div>
+    <div class="form-group">
+      <input
+        class="h-auto px-8 py-4 mb-3 text-white placeholder-white border-0 form-control opacity-70 bg-dark-o-70 rounded-pill"
+        type="password" id="password_confirmation" placeholder="Confirm Password" name="password_confirmation" />
+        
+      <!-- Validation Errors -->
+      <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    </div>
+    {{-- <div class="px-8 text-left form-group">
+      <div class="checkbox-inline">
+        <label class="m-0 text-white checkbox checkbox-outline checkbox-white">
+          <input type="checkbox" name="agree" />
+          <span></span>I Agree the
+          <a href="#" class="ml-1 text-white font-weight-bold">terms and
+            conditions</a>.</label>
+      </div>
+      <div class="text-center form-text text-muted"></div>
+    </div> --}}
+    <div class="form-group">
+      <button id="kt_login_signup_submit" type="submit"
+        class="py-3 m-2 btn btn-pill btn-outline-white font-weight-bold opacity-90 px-15">Sign
+        Up</button>
+      <a id="kt_login_signup_cancel"
+        href="/" class="py-3 m-2 btn btn-pill btn-outline-white font-weight-bold opacity-70 px-15">Cancel</a>
+    </div>
+  </form>
+</div>
+<!--end::Login Sign up form-->
+@endsection
