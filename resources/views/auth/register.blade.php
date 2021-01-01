@@ -31,7 +31,7 @@
         type="password" id="password_confirmation" placeholder="Confirm Password" name="password_confirmation" />
         
       <!-- Validation Errors -->
-      <x-auth-validation-errors class="mb-4" :errors="$errors" />
+      <x-auth-validation-errors :errors="$errors" />
     </div>
     {{-- <div class="px-8 text-left form-group">
       <div class="checkbox-inline">
