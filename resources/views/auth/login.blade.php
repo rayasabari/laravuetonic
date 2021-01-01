@@ -1,11 +1,11 @@
-@extends('layouts.guest', ['pageclass' => 'login-signin-on'])
+@extends('layout.guest', ['pageclass' => 'login-signin-on'])
 
 @section('content')
 <!--begin::Login Sign in form-->
 <div class="login-signin">
   <div class="mb-20">
     <h3>Sign In To Admin</h3>
-    <p class="opacity-60 font-weight-bold">Enter your details to login to your account:</p>
+    <p class="opacity-60">Enter your details to login to your account:</p>
   </div>
 
   <!-- Session Status -->

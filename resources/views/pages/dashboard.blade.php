@@ -7,11 +7,11 @@
     {{-- Dashboard 1 --}}
     <div class="row">
         {{-- test component vue --}}
-        <test></test>
-
-        {{-- <div class="col-lg-6 col-xxl-4">
+        {{-- <test></test> --}}
+        
+        <div class="col-lg-6 col-xxl-4">
             @include('pages.widgets._widget-1', ['class' => 'card-stretch gutter-b'])
-        </div> --}}
+        </div>
 
         <div class="col-lg-6 col-xxl-4">
             @include('pages.widgets._widget-2', ['class' => 'card-stretch gutter-b'])
@@ -22,23 +22,23 @@
             @include('pages.widgets._widget-4', ['class' => 'card-stretch card-stretch-half gutter-b'])
         </div>
 
-        <div class="col-lg-6 col-xxl-4 order-1 order-xxl-1">
+        <div class="order-1 col-lg-6 col-xxl-4 order-xxl-1">
             @include('pages.widgets._widget-5', ['class' => 'card-stretch gutter-b'])
         </div>
 
-        <div class="col-xxl-8 order-2 order-xxl-1">
+        <div class="order-2 col-xxl-8 order-xxl-1">
             @include('pages.widgets._widget-6', ['class' => 'card-stretch gutter-b'])
         </div>
 
-        <div class="col-lg-6 col-xxl-4 order-1 order-xxl-2">
+        <div class="order-1 col-lg-6 col-xxl-4 order-xxl-2">
             @include('pages.widgets._widget-7', ['class' => 'card-stretch gutter-b'])
         </div>
 
-        <div class="col-lg-6 col-xxl-4 order-1 order-xxl-2">
+        <div class="order-1 col-lg-6 col-xxl-4 order-xxl-2">
             @include('pages.widgets._widget-8', ['class' => 'card-stretch gutter-b'])
         </div>
 
-        <div class="col-lg-12 col-xxl-4 order-1 order-xxl-2">
+        <div class="order-1 col-lg-12 col-xxl-4 order-xxl-2">
             @include('pages.widgets._widget-9', ['class' => 'card-stretch gutter-b'])
         </div>
     </div>

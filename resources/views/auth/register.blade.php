@@ -1,4 +1,4 @@
-@extends('layouts.guest', ['pageclass' => 'login-signup-on'])
+@extends('layout.guest', ['pageclass' => 'login-signup-on'])
 
 @section('content')
 

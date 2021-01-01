@@ -7,7 +7,7 @@ return [
         [
             'title' => 'Dashboard',
             'root' => true,
-            'page' => '/',
+            'page' => '/dashboard',
             'new-tab' => false,
         ],
         [

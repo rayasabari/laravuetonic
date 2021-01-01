@@ -1,4 +1,4 @@
-@extends('layouts.guest', ['pageclass' => 'login-forgot-on'])
+@extends('layout.guest', ['pageclass' => 'login-forgot-on'])
 
 @section('content')
 <div class="login-forgot">
