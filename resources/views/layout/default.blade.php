@@ -26,20 +26,17 @@
             <link href="{{ config('layout.self.rtl') ? asset(Metronic::rtlCssPath($theme)) : asset($theme) }}" rel="stylesheet" type="text/css"/>
         @endforeach
 
-        <link rel="'stylesheet" href="/css/website.css">
-
         {{-- Includable CSS --}}
         @yield('styles')
     </head>
 
     <body {{ Metronic::printAttrs('body') }} {{ Metronic::printClasses('body') }}>
-        <div id="app">
-            @if (config('layout.page-loader.type') != '')
-                @include('layout.partials._page-loader')
-            @endif
-    
-            @include('layout.base._layout')
-        </div>
+
+        @if (config('layout.page-loader.type') != '')
+            @include('layout.partials._page-loader')
+        @endif
+
+        @include('layout.base._layout')
 
         <script>var HOST_URL = "{{ route('quick-search') }}";</script>
 
@@ -53,11 +50,8 @@
             <script src="{{ asset($script) }}" type="text/javascript"></script>
         @endforeach
 
-        <script src="/js/website.js"></script>
-
         {{-- Includable JS --}}
         @yield('scripts')
 
     </body>
 </html>
-

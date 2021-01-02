@@ -17,11 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/dashboard', function () {
-    $page_title = 'Dashboard';
-    $page_description = 'Some description for the page';
-    return view('pages.dashboard', compact('page_title', 'page_description'));
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::group(['middleware' => ['auth','verified']], function () {
+    Route::get('/dashboard', 'PagesController@index')->name('dashboard');
+});
+
 
 // Demo routes
 Route::get('/datatables', 'PagesController@datatables');
