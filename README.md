@@ -1,6 +1,6 @@
 # Laravuetonic
 
-**Laravuetonic** is a starter kits build of **Laravel** with user authentication packed with responsive admin template from [**Metronic Themes**](http://www.keenthemes.com/) built on **Bootstrap 4** and integrated with **Vue.js**
+**Laravuetonic** is a starter kits build of **Laravel** with user authentication and packed with responsive premium template from [**Metronic Themes**](https://keenthemes.com/metronic/) by [**Keenthemes**](https://keenthemes.com/) built on **Bootstrap 4** and integrated with **Vue.js**
 
 ### Features
   - Metronic Login and Dashboard
@@ -34,12 +34,12 @@ Note:
 
 ### Installation
 
-1. Clone this repo with following command 
+1. Run the following command 
     ```sh
     git clone https://github.com/rayasabari/laravuetonic.git laravuetonic
     ```
 
-2. Create database (you can create via phpmyadmin if you're using MySQL)
+2. Create a MySQL database project (you can create via phpmyadmin)
 2. Move to root project directory
     ```sh
     cd laravuetonic
@@ -53,17 +53,20 @@ Note:
 4. Configure your ```.env``` file. Make sure your database name and smtp mailer set up correctly
     ```sh
     ...
+    
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=databasename
+    DB_DATABASE=yourdatabasename
     DB_USERNAME=root
     DB_PASSWORD=
-    ....
+    
+    ...
     ```
-    I recommend you to use mailtrap.io to safe email testing for development
+    I recommend you to use mailtrap.io for safe email testing in development
      ```sh
     ...
+
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.mailtrap.io
     MAIL_PORT=2525
@@ -72,7 +75,8 @@ Note:
     MAIL_ENCRYPTION=null
     MAIL_FROM_ADDRESS=noreply@example.com
     MAIL_FROM_NAME="${APP_NAME}"
-    ....
+
+    ...
     ```
 
 5. From root project directory, run the following commands
