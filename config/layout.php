@@ -211,7 +211,7 @@ return [
         // User
         'user' => [
             'display' => true,
-            'layout' => 'dropdown', // offcanvas, dropdown
+            'layout' => 'offcanvas', // offcanvas, dropdown
             'dropdown' => [
                 'style' => 'dark' // light|dark
             ],

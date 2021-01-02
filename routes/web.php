@@ -17,10 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::group(['middleware' => ['auth','verified']], function () {
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'PagesController@index')->name('dashboard');
 });
-
 
 // Demo routes
 Route::get('/datatables', 'PagesController@datatables');
