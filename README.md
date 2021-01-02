@@ -25,7 +25,7 @@ Note:
   - Bootstrap 4
   - Tailwind (ready to use or just remove if you don't need)
 
-##### Requirement
+### Requirement
 
 * PHP 7.3.x +
 * MySQL Database (can be changed)
