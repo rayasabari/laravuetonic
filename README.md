@@ -2,7 +2,7 @@
 
 Laravuetonic is a starter kits build of Laravel with user authentication packed with responsive admin template from [Metronic Themes](http://www.keenthemes.com/) built on Bootstrap 4 and integrated with Vue.js
 
-##### Features
+### Features
 
   - Metronic Login and Dashboard
   - Email Registration
@@ -13,11 +13,11 @@ Laravuetonic is a starter kits build of Laravel with user authentication packed 
 Note:
 > Currently using blade templating for login and dashboard layout, but you can use vue component into the dashboard content
 
-##### Selected Theme
+### Selected Theme
   - Metronic Dashboard Demo-1 [(preview)](https://preview.keenthemes.com/metronic/demo1/index.html)
   - Metronic Classic Login-3 [(preview)](https://preview.keenthemes.com/metronic/demo1/custom/pages/login/classic/login-3.html)
 
-##### Package
+### Package
   - Laravel 8.x
   - Laravel Breeze
   - Vue 2.x
@@ -32,7 +32,7 @@ Note:
 * Composer 2.0.x +
 * Node.js 12.16.x +
 
-##### Installation
+### Installation
 
 1. Clone this repo with following command 
     ```sh
@@ -86,7 +86,6 @@ Note:
 
 
 ### Todos
-Next features
  - User Roles
  - User Profiles
 
@@ -98,3 +97,4 @@ Purchase:  http://themeforest.net/item/metronic-responsive-admin-dashboard-templ
 
 
 **Happy coding with Metronic! :)**
+
