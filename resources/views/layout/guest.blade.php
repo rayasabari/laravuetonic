@@ -71,9 +71,9 @@
   </div>
   <!--end::Main-->
 
-  {{-- <script>
-    var HOST_URL = "{{ route('dashboard') }}";
-  </script> --}}
+  <script>
+    var HOST_URL = "{{ route('welcome') }}";
+  </script>
   
   <!--begin::Global Config(global config for global JS scripts)-->
   <script>

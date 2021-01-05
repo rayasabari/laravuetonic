@@ -63,7 +63,7 @@ Note:
     
     ...
     ```
-    Use mailtrap.io to safe email testing in development
+    Use [mailtrap.io](https://mailtrap.io/) to safe email testing in development
      ```sh
     ...
 
