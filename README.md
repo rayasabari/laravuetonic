@@ -4,7 +4,8 @@
 
 ### Features
   - Metronic Login and Dashboard
-  - Easy to Customize the Layout, Aside, and Header menu item
+  - Layout Configuration
+  - Menu Generator
   - Email Registration
   - Email Verification
   - Password Recovery
@@ -23,7 +24,6 @@ Note:
   - Vue 2.x
   - Metronic 7.x
   - Bootstrap 4
-  - Tailwind (ready to use or just remove if you don't need)
 
 ### Requirement
 
@@ -39,7 +39,7 @@ Note:
     git clone https://github.com/rayasabari/laravuetonic.git laravuetonic
     ```
 
-2. Create a MySQL database project (you can create via phpmyadmin)
+2. Create a MySQL database project 
 2. Move to root project directory
     ```sh
     cd laravuetonic
@@ -63,7 +63,7 @@ Note:
     
     ...
     ```
-    Definitely, use mailtrap.io to safe email testing in development
+    Use mailtrap.io to safe email testing in development
      ```sh
     ...
 
@@ -105,22 +105,106 @@ Note:
     ```
 8. Register account and enjoy!
 
-### Customization
-- You can easily cofigure the layout, aside and head menu item in the following file:
-    | File Location | Description |
-    | ------ | ------ |
-    | ```config/layout.php``` | choose content width, enable or disable element, customize color pallete, and etc|
-    | ```config/menu_aside.php``` | organize side menu item and link |
-    | ```config/menu_header.php``` | organize head menu item and link |
+### Layout Configuration
+Metronic theme has a large variety of layout styles and settings. You can visually test them all in [**layout builder**](https://preview.keenthemes.com/metronic/demo1/builder.html) section. It also implemented this comprehensive layout configuration.
 
-    In case it doesn't affect the view, just run ```php artisan config:cache```
-- To assign the pages for verified user only, just add ```'verified'``` in middleware on route in ```routes/web.php```
-    Example:
-    ```sh
-    Route::group(['middleware' => ['auth','verified']], function () {
-        Route::get('/dashboard', 'PagesController@index')->name('dashboard');
-    });
-    ```
+Configuration file ```config/layout.php``` has all the respective sections and their styling and positioning values.
+
+By editing config values in file you will be able to set the theme layout to your needs by given possibility.
+
+> In case it doesn't affect the view, just run ```php artisan config:cache```
+
+### Menu Generator
+
+Theme menu elements are rich of features including link styling, icons, href properties and so on. Writing menu nodes by hand might get a little too overwhelming and messy. Hence, we have implemented an automatic menu generator which is configured from the menu config files and rendered in the menu section for you.
+
+Menu config files file ```config/menu_aside.php``` and ```config/menu_header.php``` by default hold dummy data.
+
+Here's a basic example of the menu section and how to configure it.
+
+```
+<?php
+// Aside menu
+return [
+
+    'items' => [
+        // Dashboard
+        [
+            'title' => 'Dashboard',
+            'root' => true,
+            'icon' => 'media/svg/icons/Design/Layers.svg', // or can be 'flaticon-home' or any flaticon-*
+            'page' => '/',
+            'new-tab' => false,
+        ],
+        // Custom
+        [
+            'section' => 'Custom',
+        ],
+        [
+            'title' => 'Applications',
+            'icon' => 'media/svg/icons/Layout/Layout-4-blocks.svg',
+            'bullet' => 'line',
+            'root' => true,
+            'submenu' => [
+                [
+                    'title' => 'Users',
+                    'bullet' => 'dot',
+                    'submenu' => [
+                        [
+                            'title' => 'List - Default',
+                            'page' => 'test',
+                        ],
+                        [
+                            'title' => 'List - Datatable',
+                            'page' => 'custom/apps/user/list-datatable'
+                        ],
+                        [
+                            'title' => 'List - Columns 1',
+                            'page' => 'custom/apps/user/list-columns-1'
+                        ],
+                        [
+                            'title' => 'List - Columns 2',
+                            'page' => 'custom/apps/user/list-columns-2'
+                        ],
+                        [
+                            'title' => 'Add User',
+                            'page' => 'custom/apps/user/add-user'
+                        ],
+                        [
+                            'title' => 'Edit User',
+                            'page' => 'custom/apps/user/edit-user'
+                        ],
+                    ]
+                ],
+...
+```
+
+This part generates menu nodes as such
+
+<img src="menu_example.png" alt="menu_example" width="300"/>
+<br/><br/>
+
+Conifg values and descriptions
+
+| Key | Description	| Available values |
+| ------ |	------	| ------ |
+| ```title``` |	link title	| string |
+| ```page``` | link url | slug type i.e ```/my-blog``` |
+| ```new-tab```	| defines if link opens in new tab	| true, false |
+| ```root``` | defines if link is at root level | true, false |
+| ```section```	| section heading	| string |
+| ```icon``` |	menu icon | Icon file link or class. I.e. SVG Icons or Flaticon |
+| ```bullet``` | defines menu/submenu bullet style | line, dot |
+| ```submenu```	| submenu node	| array |
+
+### Additional Info
+To assign the pages for verified user only, just add ```'verified'```  middleware on route in ```routes/web.php```
+Example:
+```sh
+Route::group(['middleware' => ['auth','verified']], function () {
+    Route::get('/dashboard', 'PagesController@index')->name('dashboard');
+});
+```
 
 License
 ----

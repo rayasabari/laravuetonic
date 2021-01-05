@@ -13,7 +13,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Export
+              Export Vue
             </a>
             <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
               <!-- {{-- Navigation --}} -->

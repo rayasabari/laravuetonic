@@ -28,6 +28,8 @@
 
         {{-- Includable CSS --}}
         @yield('styles')
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
     </head>
 
     <body {{ Metronic::printAttrs('body') }} {{ Metronic::printClasses('body') }}>
@@ -53,5 +55,7 @@
         {{-- Includable JS --}}
         @yield('scripts')
 
+        {{-- Vue --}}
+        <script src="/js/website.js" type="text/javascript"></script>
     </body>
 </html>

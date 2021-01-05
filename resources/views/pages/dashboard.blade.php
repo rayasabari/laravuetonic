@@ -7,7 +7,7 @@
     {{-- Dashboard 1 --}}
     <div class="row">
         {{-- test component vue --}}
-        {{-- <test></test> --}}
+        <test></test>
         
         <div class="col-lg-6 col-xxl-4">
             @include('pages.widgets._widget-1', ['class' => 'card-stretch gutter-b'])

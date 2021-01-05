@@ -1,12 +1,12 @@
 @if(config('layout.self.layout') == 'blank')
-    <div class="d-flex flex-column flex-root">
+    <div id="app class="d-flex flex-column flex-root">
         @yield('content')
     </div>
 @else
 
     @include('layout.base._header-mobile')
 
-    <div class="d-flex flex-column flex-root">
+    <div id="app" class="d-flex flex-column flex-root">
         <div class="d-flex flex-row flex-column-fluid page">
 
             @if(config('layout.aside.self.display'))
