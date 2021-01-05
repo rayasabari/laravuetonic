@@ -63,7 +63,7 @@ Note:
     
     ...
     ```
-    I recommend you to use mailtrap.io for safe email testing in development
+    Definitely, use mailtrap.io to safe email testing in development
      ```sh
     ...
 
@@ -101,12 +101,12 @@ Note:
     
 6. Run in your browser
     ```sh
-    htttp://127.0.0.1:8000
+    http://127.0.0.1:8000
     ```
 8. Register account and enjoy!
 
-### Customize
-- You can easily cofigure the layout, aside and head menu in the following file:
+### Customization
+- You can easily cofigure the layout, aside and head menu item in the following file:
     | File Location | Description |
     | ------ | ------ |
     | ```config/layout.php``` | choose content width, enable or disable element, customize color pallete, and etc|
@@ -121,10 +121,6 @@ Note:
         Route::get('/dashboard', 'PagesController@index')->name('dashboard');
     });
     ```
-
-### Todos
- - User Roles
- - User Profiles
 
 License
 ----
